@@ -31,7 +31,6 @@ Librerias de javax.swing.JOptionPane.
 
 
 
-Dudas sobre el proyecto: 
 
 
 
