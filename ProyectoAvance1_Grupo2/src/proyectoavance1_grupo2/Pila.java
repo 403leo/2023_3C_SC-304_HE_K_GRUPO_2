@@ -7,6 +7,12 @@ public class Pila {
     private NodoPila cimaPila;
     private boolean discapacidad;// DUDA
     private int maximosPasajeros;
+    
+    // Constructor vacio. 
+    
+    public Pila() {
+        this.cimaPila = null;
+    }
 
     public Pila(int maximosPasajeros) {
         this.maximosPasajeros = maximosPasajeros;
@@ -36,9 +42,7 @@ public class Pila {
         this.maximosPasajeros = maximosPasajeros;
     }
 
-    public Pila() {
-        this.cimaPila = null;
-    }
+    
 
     public boolean esVacia() {
         if (cimaPila == null) {
@@ -51,12 +55,12 @@ public class Pila {
 
     } //Final del esVacia
 
-    public void apilar(String numero) {
+    public void apilar(String nombreCompleto) {
 
         Pasajero d = new Pasajero();
-        d.setEdad(Integer.parseInt(numero));
+        d.setEdad(Integer.parseInt(nombreCompleto));
 
-        d.setNombreCompleto(numero);
+        d.setNombreCompleto(nombreCompleto);
 
         NodoPila nuevo = new NodoPila();
 

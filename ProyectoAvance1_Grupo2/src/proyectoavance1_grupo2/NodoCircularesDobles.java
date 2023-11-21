@@ -11,6 +11,10 @@ public class NodoCircularesDobles {
         this.pasajero1 = pasajero1;
     }
 
+    public NodoCircularesDobles(Pila pasajero) {
+        this.pasajero = pasajero;
+    }
+
     public Pila getPasajero() {
         return pasajero;
     }
