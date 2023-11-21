@@ -1,11 +1,16 @@
-
 package proyectoavance1_grupo2;
 
 public class NodoPila {
+
     private Pasajero elemento;
     private NodoPila siguiente;
 
     public NodoPila() {
+        this.siguiente = null;
+    }
+
+    public NodoPila(Pasajero elemento) {
+        this.elemento = elemento;
         this.siguiente = null;
     }
 
@@ -24,9 +29,5 @@ public class NodoPila {
     public void setSiguiente(NodoPila siguiente) {
         this.siguiente = siguiente;
     }
-    
-    
-    
-    
-    
+
 } // Final de la clase NodoPila

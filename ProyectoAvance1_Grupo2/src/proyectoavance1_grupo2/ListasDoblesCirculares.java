@@ -1,15 +1,39 @@
-
 package proyectoavance1_grupo2;
 
-
 public class ListasDoblesCirculares {
+
     private NodoCircularesDobles cabeza;
     private NodoCircularesDobles ultimo;
-    private String maximosNodos;
+    private int maximosNodos;
 
-    public ListasDoblesCirculares() {
+    public NodoCircularesDobles getCabeza() {
+        return cabeza;
     }
-    
+
+    public void setCabeza(NodoCircularesDobles cabeza) {
+        this.cabeza = cabeza;
+    }
+
+    public NodoCircularesDobles getUltimo() {
+        return ultimo;
+    }
+
+    public void setUltimo(NodoCircularesDobles ultimo) {
+        this.ultimo = ultimo;
+    }
+
+    public int getMaximosNodos() {
+        return maximosNodos;
+    }
+
+    public void setMaximosNodos(int maximosNodos) {
+        this.maximosNodos = maximosNodos;
+    }
+
+    public ListasDoblesCirculares(int maximosNodos) {
+        this.maximosNodos = maximosNodos;
+    }
+
     public void inserta(PasajeroDoble p) {
         //Paso 1, de la presentación
         if (cabeza == null) {
@@ -53,6 +77,27 @@ public class ListasDoblesCirculares {
             }
         }
     }
-            
-    
+
+    @Override
+    public String toString() {
+        String respuesta = "Lista doble circular: \n";
+
+        if (cabeza != null) {
+            NodoCircularesDobles aux = cabeza;
+
+            respuesta += aux.toString() + "\n";
+
+            aux = aux.getSiguiente();
+
+            while (aux != cabeza) {
+                respuesta += aux.toString() + "\n";
+                aux = aux.getSiguiente();
+            }
+        } else {
+            respuesta += "Vacía";
+        }
+
+        return respuesta;
+    }
+
 } // Final de la clase Listas Dobles Circulares. 

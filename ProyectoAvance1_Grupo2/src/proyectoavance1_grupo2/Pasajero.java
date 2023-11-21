@@ -1,5 +1,7 @@
 package proyectoavance1_grupo2;
 
+import javax.swing.JOptionPane;
+
 public class Pasajero {
 
     private String nombreCompleto;
@@ -7,28 +9,31 @@ public class Pasajero {
     private String origen;
     private String destino;
     private boolean discapacidad;
+    private int id;
+
     private enum Estado {
         En_Cola,
         En_Camino,
         Completado
     } // Final del enum
 
-    public Pasajero(String nombreCompleto, int edad, boolean discapacidad) {
+    public Pasajero(String nombreCompleto, int edad, String origen, String destino,boolean discapacidad, int id) {
         this.nombreCompleto = nombreCompleto;
         this.edad = edad;
+        this.origen = origen;
+        this.destino = destino;
         this.discapacidad = discapacidad;
+        this.id = id;
     }
 
     public Pasajero() {
-        this.nombreCompleto = "";
-        this.edad = 0;
+        this.nombreCompleto= "";
+        this.id = 0;
         this.origen = "";
         this.destino = "";
         this.discapacidad = false;
-    }
 
-    
-    
+    }
     
 
     public String getNombreCompleto() {
@@ -71,11 +76,21 @@ public class Pasajero {
         this.discapacidad = discapacidad;
     }
 
+    
+
+    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Pasajero{" + '}';
     }
-    
-    
 
 } // Final de la clase Pasajero
