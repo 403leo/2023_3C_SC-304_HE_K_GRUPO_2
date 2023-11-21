@@ -5,7 +5,7 @@ public class ListasDoblesCirculares {
     private NodoCircularesDobles cabeza;
     private NodoCircularesDobles ultimo;
     private int maximosNodos;
-    
+
     public ListasDoblesCirculares(int maximosNodos) {
         this.maximosNodos = maximosNodos;
     }
@@ -33,8 +33,6 @@ public class ListasDoblesCirculares {
     public void setMaximosNodos(int maximosNodos) {
         this.maximosNodos = maximosNodos;
     }
-
-    
 
     public void inserta(PasajeroDoble p) {
         //Paso 1, de la presentación

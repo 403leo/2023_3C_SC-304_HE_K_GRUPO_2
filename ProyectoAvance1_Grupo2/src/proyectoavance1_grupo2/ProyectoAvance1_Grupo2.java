@@ -9,18 +9,24 @@ public class ProyectoAvance1_Grupo2 {
         //MENU
         int opcion;
 
+        Pila p = new Pila();
+
         do {
             opcion = mostrarMenu();
 
             switch (opcion) {
                 //Opcion 1
+
                 case 1:
+                    int subopcion1;
+                    do{
                     JOptionPane.showMessageDialog(null, "Has elegido Vagon");
-                    int subopcion1 = mostrarSubMenuOpcion1();
+                    subopcion1 = mostrarSubMenuOpcion1();
 
                     switch (subopcion1) {
                         case 1:
                             JOptionPane.showMessageDialog(null, "Ver informacion de los pasajeros ");
+                            System.out.println(p.imprimirPilaPasajero());
                             break;
                         case 2:
                             JOptionPane.showMessageDialog(null, "Consultar informacion de pasajeros");
@@ -29,38 +35,41 @@ public class ProyectoAvance1_Grupo2 {
                             JOptionPane.showMessageDialog(null, "Subopción no válida. Por favor, elige nuevamente.");
                             break;
                     }
+                    } while(subopcion1 != 3);
                     break;
 
                 //Opcion 2
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Has elegido Estaciones");
-                    int subopcion2 = mostrarSubMenuOpcion2();
+                    int subopcion2;
+                    do {
+                        JOptionPane.showMessageDialog(null, "Has elegido Estaciones");
+                        subopcion2 = mostrarSubMenuOpcion2();
 
-                    switch (subopcion2) {
-                        case 1:
-                            JOptionPane.showMessageDialog(null, "Agregar pasajeros");
+                        switch (subopcion2) {
+                            case 1:
+                                JOptionPane.showMessageDialog(null, "Agregar pasajeros");
 
-                            Pila p = new Pila();
+                                int id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su numero de cedula: "));
+                                String nombreCompleto = JOptionPane.showInputDialog("Ingrese su nombre completo: ");
+                                int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
+                                boolean discapacidad = Boolean.parseBoolean(JOptionPane.showInputDialog("Ingrese (true | false ) su discapacidad: "));
+                                String origen = JOptionPane.showInputDialog("Ingrese su ubicacion actual: ");
+                                String destino = JOptionPane.showInputDialog("Ingrese su destino final: ");
 
-                            int id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su numero de cedula: "));
-                            String nombreCompleto = JOptionPane.showInputDialog("Ingrese su nombre completo: ");
-                            int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
-                            boolean discapacidad = Boolean.parseBoolean(JOptionPane.showInputDialog("Ingrese (true | false ) su discapacidad: "));
-                            String origen = JOptionPane.showInputDialog("Ingrese su ubicacion actual: ");
-                            String destino = JOptionPane.showInputDialog("Ingrese su destino final: ");
+                                Pasajero p1 = new Pasajero(nombreCompleto, edad, origen, destino, discapacidad, id);
 
-                            Pasajero p1 = new Pasajero(nombreCompleto, edad, origen, destino, discapacidad, id);
+                                p.apilar(p1);
+                                System.out.println(p.imprimirPilaPasajero());
 
-                            p.apilar(p1);
-                            System.out.println(p.imprimirPilaPasajero());
-                            break;
-                        case 2:
-                            JOptionPane.showMessageDialog(null, "Eliminar pasajeros");
+                                break;
+                            case 2:
+                                JOptionPane.showMessageDialog(null, "Eliminar pasajeros");
 
-                        default:
-                            JOptionPane.showMessageDialog(null, "Subopción no válida. Por favor, elige nuevamente.");
-                            break;
-                    }
+                            default:
+                                JOptionPane.showMessageDialog(null, "Subopción no válida. Por favor, elige nuevamente.");
+                                break;
+                        }
+                    } while (subopcion2 != 3);
                     break;
                 //Salir del MENU
                 case 3:
