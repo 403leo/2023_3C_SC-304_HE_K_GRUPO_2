@@ -179,7 +179,7 @@ public class Pila {
     
     
     
-    public void extrae(Pasajero pasajero)
+    public Boolean extrae(String nombre)
     {
         if(!p1.esVacia())
         {
@@ -189,7 +189,7 @@ public class Pila {
             //Empezamos a recorrer la pila 
             while(actual != null)
             {
-                if(pasajero.getNombreCompleto().equals(actual.getElemento().getNombreCompleto()))
+                if(nombre.equals(actual.getElemento().getNombreCompleto()))
                 {
                     if(anterior != null)
                     {
@@ -220,6 +220,7 @@ public class Pila {
             //La pila está vacía
             System.out.println("No se puede extraer el elemento, porque la Pila está vacía");
         }
+        return true;
     }
     
     
