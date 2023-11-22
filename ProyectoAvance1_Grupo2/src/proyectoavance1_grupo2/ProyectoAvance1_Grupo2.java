@@ -81,7 +81,7 @@ public class ProyectoAvance1_Grupo2 {
                             case 2:
                                 JOptionPane.showMessageDialog(null, "Eliminar pasajeros");
 
-                                if (p.extrae(p1)) {
+                                if (p.extrae("Maria")) {
                                     System.out.println("El pasajero ha sido eliminado.");
 
                                 } else {
