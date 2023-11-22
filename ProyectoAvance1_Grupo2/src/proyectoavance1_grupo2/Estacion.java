@@ -24,7 +24,7 @@ public class Estacion {
         System.out.println(p1.imprimirPilaPasajero());
     }
     
-    public void extrae(Pasajero p )
+    public void extrae(Pasajero p)
     {
         if(!p1.esVacia())
         {

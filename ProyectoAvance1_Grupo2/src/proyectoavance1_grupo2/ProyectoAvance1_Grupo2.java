@@ -6,6 +6,22 @@ public class ProyectoAvance1_Grupo2 {
 
     public static void main(String[] args) {
 
+//        Pila p = new Pila();
+//
+//        p.apilar(new Pasajero("Juan", 25, "San José", "San José", true, 1));
+//        p.apilar(new Pasajero("Maria", 30, "Heredia", "Cartago", false, 2));
+//
+//        
+//        p.extrae(p);
+//        
+//        System.out.println(p.imprimirPilaPasajero());
+//        
+//        
+//        
+//        
+////        Pasajero pasajeroEliminado = p.desapilarb();
+////
+////        System.out.println("Pasajero eliminado: " + pasajeroEliminado);
         //MENU
         int opcion;
 
@@ -19,23 +35,23 @@ public class ProyectoAvance1_Grupo2 {
 
                 case 1:
                     int subopcion1;
-                    do{
-                    JOptionPane.showMessageDialog(null, "Has elegido Vagon");
-                    subopcion1 = mostrarSubMenuOpcion1();
+                    do {
+                        JOptionPane.showMessageDialog(null, "Has elegido Vagon");
+                        subopcion1 = mostrarSubMenuOpcion1();
 
-                    switch (subopcion1) {
-                        case 1:
-                            JOptionPane.showMessageDialog(null, "Ver informacion de los pasajeros ");
-                            System.out.println(p.imprimirPilaPasajero());
-                            break;
-                        case 2:
-                            JOptionPane.showMessageDialog(null, "Consultar informacion de pasajeros");
-                            break;
-                        default:
-                            JOptionPane.showMessageDialog(null, "Subopción no válida. Por favor, elige nuevamente.");
-                            break;
-                    }
-                    } while(subopcion1 != 3);
+                        switch (subopcion1) {
+                            case 1:
+                                JOptionPane.showMessageDialog(null, "Ver informacion de los pasajeros ");
+                                System.out.println(p.imprimirPilaPasajero());
+                                break;
+                            case 2:
+                                JOptionPane.showMessageDialog(null, "Consultar informacion de pasajeros");
+                                break;
+                            default:
+                                JOptionPane.showMessageDialog(null, "Subopción no válida. Por favor, elige nuevamente.");
+                                break;
+                        }
+                    } while (subopcion1 != 3);
                     break;
 
                 //Opcion 2
@@ -64,6 +80,14 @@ public class ProyectoAvance1_Grupo2 {
                                 break;
                             case 2:
                                 JOptionPane.showMessageDialog(null, "Eliminar pasajeros");
+
+                                if (p.extrae(p1)) {
+                                    System.out.println("El pasajero ha sido eliminado.");
+
+                                } else {
+                                    System.out.println("El pasajjero no se ha encontrado. ");
+
+                                }
 
                             default:
                                 JOptionPane.showMessageDialog(null, "Subopción no válida. Por favor, elige nuevamente.");
