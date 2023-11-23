@@ -10,6 +10,12 @@ public class NodoCola {
         this.atras = null;
     }
 
+    public NodoCola(String Pasajero) {
+        this.Pasajero = Pasajero;
+    }
+
+    
+    
     public String getPasajero() {
         return Pasajero;
     }

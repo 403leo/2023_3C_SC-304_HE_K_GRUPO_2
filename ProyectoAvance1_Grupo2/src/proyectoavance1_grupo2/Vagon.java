@@ -4,6 +4,7 @@ public class Vagon {
 
     public ListasDoblesCirculares discapacitados;
     public ListasDoblesCirculares NoDiscapacitados;
+    private String[][] jugadores = new String[2][4]; // Matriz
 
     private enum estacionActual {  // Hay que utilizarlo en los metodo mios?
         HEREDIA,
@@ -14,34 +15,30 @@ public class Vagon {
         CARTAGO,
         GUANACASTE
     } // Final del enum estacion actual
+    
+    
+     public void inicializarJuego() {
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 4; j++) {
+                jugadores[i][j] = "-"; // Se le asigna a cada espacio de la matriz, 
+                //llenando la matriz con valores por defecto "-".
+            }
+        }
+    }
+    public void mostrarTablero() {
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(jugadores[i][j]);
 
-//    public boolean hayAsientosDisponibles(Pasajero pasajero) {
-//        boolean espacio = false; // En caso de que se encuentre el espacion se cambiara a true.
-//
-//        if (pasajero.isDiscapacidad() == true) {
-//
-//            if (NoDiscapacitados.getCabeza() != null) {
-//
-//            } // Final del if 2 
-//
-//        } // Final del if 1 
-//        else {
-//
-//            if (discapacitados.getCabeza() != null) {
-//
-//            } // Final del if 2 
-//
-//        } // Final del else 1 
-//
-//        return espacio;
-//
-//    } // Final del hay asientos Dispibles
+                if (j < 3) {
+                    System.out.print(" | "); // divide los elementos de las filas. 
+                }
+            }
+            System.out.println();
+            if (i < 1) {
+                System.out.println("---------"); // Divide los elementos de las columnas. 
+            }
+        }
+    }
 
-//    public void agregarPasajero(Pasajero pasajero) {
-//
-//       
-//
-//    } // Final del metodp agregar pasajero. 
-//    
-} // Final de la clase Vagon
-
+}

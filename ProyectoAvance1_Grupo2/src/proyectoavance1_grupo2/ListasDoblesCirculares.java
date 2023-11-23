@@ -34,7 +34,7 @@ public class ListasDoblesCirculares {
         this.maximosNodos = maximosNodos;
     }
 
-    public void inserta(PasajeroDoble p) {
+    public void inserta(Pasajero p) {
         //Paso 1, de la presentación
         if (cabeza == null) {
             cabeza = new NodoCircularesDobles(p);

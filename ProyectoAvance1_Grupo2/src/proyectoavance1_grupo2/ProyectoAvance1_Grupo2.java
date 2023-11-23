@@ -6,26 +6,11 @@ public class ProyectoAvance1_Grupo2 {
 
     public static void main(String[] args) {
 
-//        Pila p = new Pila();
-//
-//        p.apilar(new Pasajero("Juan", 25, "San José", "San José", true, 1));
-//        p.apilar(new Pasajero("Maria", 30, "Heredia", "Cartago", false, 2));
-//
-//        
-//        p.extrae(p);
-//        
-//        System.out.println(p.imprimirPilaPasajero());
-//        
-//        
-//        
-//        
-////        Pasajero pasajeroEliminado = p.desapilarb();
-////
-////        System.out.println("Pasajero eliminado: " + pasajeroEliminado);
         //MENU
         int opcion;
 
-        Pila p = new Pila();
+        Cola C = new Cola();
+        Vagon vagon = new Vagon();
 
         do {
             opcion = mostrarMenu();
@@ -42,7 +27,8 @@ public class ProyectoAvance1_Grupo2 {
                         switch (subopcion1) {
                             case 1:
                                 JOptionPane.showMessageDialog(null, "Ver informacion de los pasajeros ");
-                                System.out.println(p.imprimirPilaPasajero());
+                                vagon.inicializarJuego();
+                                vagon.mostrarTablero();
                                 break;
                             case 2:
                                 JOptionPane.showMessageDialog(null, "Consultar informacion de pasajeros");
@@ -72,16 +58,16 @@ public class ProyectoAvance1_Grupo2 {
                                 String origen = JOptionPane.showInputDialog("Ingrese su ubicacion actual: ");
                                 String destino = JOptionPane.showInputDialog("Ingrese su destino final: ");
 
-                                Pasajero p1 = new Pasajero(nombreCompleto, edad, origen, destino, discapacidad, id);
-
-                                p.apilar(p1);
-                                System.out.println(p.imprimirPilaPasajero());
+//                                Pasajero p1 = new Pasajero(nombreCompleto, edad, origen, destino, discapacidad, id);
+                                C.hacerFila(new NodoCola("Leo"));
+                                
+                                System.out.println(C.imprimirCola());
 
                                 break;
                             case 2:
                                 JOptionPane.showMessageDialog(null, "Eliminar pasajeros");
 
-                                if (p.extrae(p1)) {
+                                if (true) {
                                     System.out.println("El pasajero ha sido eliminado.");
 
                                 } else {

@@ -39,7 +39,7 @@ public class Cola {
         }
     }
 
-    public NodoCola atender() {
+    public NodoCola atender() { // Cambiarlo a tipo pasajero. 
         NodoCola actual = Frente;
 
         if (Frente != null) {
