@@ -1,27 +1,24 @@
-
 package proyectoavance1_grupo2;
 
 public class NodoCola {
-    
-    private String Pasajero;
+
+    private Pasajero pasajero;
     private NodoCola atras;
 
     public NodoCola() {
         this.atras = null;
     }
 
-    public NodoCola(String Pasajero) {
-        this.Pasajero = Pasajero;
+    public NodoCola(Pasajero pasajero) {
+        this.pasajero = pasajero;
     }
 
-    
-    
-    public String getPasajero() {
-        return Pasajero;
+    public Pasajero getPasajero() {
+        return pasajero;
     }
 
-    public void setPasajero(String Pasajero) {
-        this.Pasajero = Pasajero;
+    public void setPasajero(Pasajero pasajero) {
+        this.pasajero = pasajero;
     }
 
     public NodoCola getAtras() {
@@ -31,11 +28,9 @@ public class NodoCola {
     public void setAtras(NodoCola atras) {
         this.atras = atras;
     }
-    
+
     @Override
     public String toString() {
-        return this.Pasajero; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return "Pasajero: " + pasajero;
     }
-
-    
 } // Final de la clase NodoCola

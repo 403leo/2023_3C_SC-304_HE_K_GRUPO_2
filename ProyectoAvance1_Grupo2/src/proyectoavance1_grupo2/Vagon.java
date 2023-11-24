@@ -1,5 +1,7 @@
 package proyectoavance1_grupo2;
 
+import javax.swing.JOptionPane;
+
 public class Vagon {
 
     public ListasDoblesCirculares discapacitados;
@@ -40,5 +42,18 @@ public class Vagon {
             }
         }
     }
+    
+//     public boolean hacerJugada(int fila, int columna, String jugador) {
+//        // Verificar que la posición especificada esté dentro de los límites de la matriz y que la celda esté vacía ("-").
+//        if (fila >= 0 && fila < 3 && columna >= 0 && columna < 3 && jugadores[fila][columna].equals("-")) {
+//            // Si la posición es válida, actualizar la matriz con el símbolo del jugador.
+//            jugadores[fila][columna] = jugador;
+//            return true; // Indicar que la jugada fue exitosa.
+//        } else {
+//            // Si la posición no es válida, mostrar un mensaje de error y devolver false.
+//            JOptionPane.showMessageDialog(null, "Movimiento inválido, intenta de nuevo.");
+//            return false; // Indicar que la jugada fue inválida.
+//        }
+//    }
 
 }

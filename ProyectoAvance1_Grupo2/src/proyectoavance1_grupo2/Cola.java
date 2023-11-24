@@ -1,8 +1,7 @@
-
 package proyectoavance1_grupo2;
 
-
 public class Cola {
+
     private NodoCola Frente;
     private NodoCola ultimo;
 
@@ -24,17 +23,18 @@ public class Cola {
     public void setUltimo(NodoCola ultimo) {
         this.ultimo = ultimo;
     }
-    
-    public void hacerFila(NodoCola elemento) {
+
+    public void hacerFila(Pasajero p) {
+        NodoCola nuevo = new NodoCola(p);
         if (Frente == null) // La fila está vacía
         {
-            Frente = elemento; //Se asigna al nuevo dato ( el del usuario ).
-            Frente = elemento;
+            Frente = nuevo; //Se asigna al nuevo dato ( el del usuario ).
+            Frente = nuevo;
         } else {
             //12        ->          13
-            ultimo.setAtras(elemento); // Si la cola es de tres, el que se agrega se vuelve 4 (osea ahora seria el ultimo)
+            ultimo.setAtras(nuevo); // Si la cola es de tres, el que se agrega se vuelve 4 (osea ahora seria el ultimo)
             //y el siguiente que este es nulo
-            ultimo = elemento;
+            ultimo = nuevo;
 
         }
     }
@@ -63,4 +63,19 @@ public class Cola {
         return respuesta;
     }
     
+    public String imprimirColaNombre() {
+        String respuesta = ""; // En esta respuesta vamos a ir concatenando los nodos, para poder imprimirlos juntos
+        NodoCola actual = Frente;
+
+        while (actual != null) {
+            //Podemos hacer el recorrido
+            respuesta += actual.getPasajero().getNombreCompleto() + " - " ;
+            actual = actual.getAtras();
+        }
+
+        return respuesta;
+    }
+    
+    
+
 } // Final de la clase Cola

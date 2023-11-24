@@ -90,7 +90,8 @@ public class Pasajero {
 
     @Override
     public String toString() {
-        return "Pasajero{" + '}';
+        return "Pasajero:" + nombreCompleto + " - " + edad 
+                + " - " + origen + " - " + destino + " -  " + discapacidad + " - " + id;
     }
 
 } // Final de la clase Pasajero
