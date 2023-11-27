@@ -1,0 +1,17 @@
+Para este proyecto vamos a intentar representra mediante dos pantallas el movimiento del vagon y las colas de cada estacion y ademas de su subida en los vagones. 
+
+Explicacion de la visualizacion de los trenes:
+
+Se indica la ubicacion actual mediante un mensaje en la parte de arriba
+
+
+
+
+Despues, se muestran dos paneles los cuales son:
+
+1. En el panel de la izquierda se imprime la estacion actual y las colas preferenciales y no preferenciales. 
+
+2. En el panel de la derecha se imprimen tres fila del vagon, las cuales representan las personas en el tren. 
+
+
+En la parte de abajo en la izquierda, se añade un boton para agregar pasajeros. 
