@@ -1,8 +1,8 @@
 
 package Comunes;
+ 
 
-
-public enum EnumDiscapacidad {
+public enum EnumDiscapacidad { // EstadoDiscapacidad - SI o NO
         SI,
         NO
     }

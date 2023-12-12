@@ -1,10 +1,11 @@
-
 package com.mycompany.proyectoavance_estructuras2;
 
 import Comunes.*;
 
 public class Pasajero {
 
+    
+    // Se definen todos los atributos necesarios del pasajero
     private String nombreCompleto;
     private int edad;
     private EnumEstacion origen;
@@ -13,17 +14,12 @@ public class Pasajero {
     private int id;
     private EnumEstadoViaje estadoViaje;
 
-    public Pasajero(EnumEstacion origen, EnumEstacion destino, EnumDiscapacidad discapacidad, EnumEstadoViaje estadoViaje) {
-        this.origen = origen;
-        this.destino = destino;
-        this.discapacidad = discapacidad;
-        this.estadoViaje = estadoViaje;
-    }
-
+    
+    // Se crea un constructor vacio. 
     public Pasajero() {
     }
-
-    public Pasajero(String nombreCompleto, int edad, EnumEstacion origen, EnumEstacion destino, EnumDiscapacidad discapacidad, int id, EnumEstadoViaje estadoViaje) {
+    //  Se crea un constructor con todos los datos del usuario a ingresar
+    public Pasajero(String nombreCompleto, int edad, EnumEstacion origen, EnumEstacion destino, EnumDiscapacidad discapacidad, EnumEstadoViaje estadoViaje, int id) {
         this.nombreCompleto = nombreCompleto;
         this.edad = edad;
         this.origen = origen;
@@ -32,7 +28,7 @@ public class Pasajero {
         this.id = id;
         this.estadoViaje = estadoViaje;
     }
-      
+    // Encapsuladores
     public String getNombreCompleto() {
         return nombreCompleto;
     }
@@ -89,10 +85,6 @@ public class Pasajero {
         this.estadoViaje = estadoViaje;
     }
 
-    @Override
-    public String toString() {
-        return "Pasajero{" + "nombreCompleto=" + nombreCompleto + ", edad=" + edad + ", origen=" + origen + ", destino=" + destino + ", discapacidad=" + discapacidad + ", id=" + id + ", estadoViaje=" + estadoViaje + '}';
-    }
-    
-    
+
+
 }

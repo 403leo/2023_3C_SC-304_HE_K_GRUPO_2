@@ -1,50 +1,30 @@
-
 package com.mycompany.proyectoavance_estructuras2;
-
 
 public class ListaDobleCircular {
 
-    NodoEstacion cabeza;
-    private NodoEstacion ultimo;
+    public NodoEstacion cabeza; // Cabeza de la lista doble que recibe estaciones. 
+    private NodoEstacion ultimo; // Ultimo de la lista doble que recibe estaciones. 
 
-    public ListaDobleCircular() {
+    public ListaDobleCircular() { // Constructor con los datos vacios
         cabeza = null;
         ultimo = null;
     }
 
-    
-    
-    public Boolean esVacio() {
+    public Boolean esVacio() { // Compruba si la lista esta vacia. 
         if (cabeza == null) {
             return true;
         } else {
             return false;
         }
     }
-
-    public void InsertarInicio(Estacion e) {
+  
+    public void InsertarFilnal(Estacion e) { // Metodo que recibe las estaciones de todas las provincias para poder crearlas. 
         NodoEstacion nuevoNodo = new NodoEstacion(e);
-        if (esVacio()) {
+        if (esVacio()) { // si no existe se asignara como que no hay 
             nuevoNodo.anterior = nuevoNodo;
             nuevoNodo.siguiente = nuevoNodo;
             cabeza = nuevoNodo;
-        } else {
-            ultimo = cabeza.anterior;
-            nuevoNodo.anterior = ultimo;
-            nuevoNodo.siguiente = cabeza;
-            cabeza.anterior = nuevoNodo;
-            ultimo.siguiente = nuevoNodo;
-            cabeza = nuevoNodo;
-        }
-    }
-
-    public void InsertarFilnal(Estacion e) {
-        NodoEstacion nuevoNodo = new NodoEstacion(e);
-        if (esVacio()) {
-            nuevoNodo.anterior = nuevoNodo;
-            nuevoNodo.siguiente = nuevoNodo;
-            cabeza = nuevoNodo;
-        } else {
+        } else { // En caso de que no hay la agregara.
             ultimo = cabeza.anterior;
             nuevoNodo.anterior = ultimo;
             nuevoNodo.siguiente = cabeza;
@@ -53,28 +33,5 @@ public class ListaDobleCircular {
         }
     }
 
-    public void EliminarInicio() {
-        if (esVacio()) {
-            if (cabeza == ultimo) {
-                cabeza = null;
-            } else {
-                cabeza = cabeza.siguiente;
-                cabeza.anterior = ultimo;
-                ultimo.siguiente = cabeza;
-            }
-        }
-    }
-
-    public void EliminarUltimo() {
-        if (esVacio()) {
-            if (cabeza == ultimo) {
-                cabeza = null;
-            } else {
-                NodoEstacion nuevoUltimo= ultimo.anterior;
-                nuevoUltimo.siguiente=cabeza;
-                cabeza.anterior=nuevoUltimo;
-            }
-        }
-    }
 
 } // Final de la clase Listas Dobles Circulares.

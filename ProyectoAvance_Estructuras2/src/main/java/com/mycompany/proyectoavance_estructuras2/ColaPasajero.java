@@ -1,20 +1,21 @@
-
-
 package com.mycompany.proyectoavance_estructuras2;
 
 
 public class ColaPasajero {
 
+    //Atributos de la clase 
     private NodoPasajero Frente;
     private NodoPasajero ultimo;
     private int tamano;//cuantos llevamos
 
-    public ColaPasajero() {
+    //Constructor que empieza vacio
+    public ColaPasajero() { // todo empieza vacio
         Frente = null;
         ultimo = null;
         tamano = 0;
     }
 
+    //Getters de la clase
     public NodoPasajero getFrente() {
         return Frente;
     }
@@ -23,62 +24,53 @@ public class ColaPasajero {
         return ultimo;
     }
 
-    public void encolar(Pasajero p) {
-        NodoPasajero nuevoNodo = new NodoPasajero(p);
-        if (esVacia()) {
-            Frente = nuevoNodo;
-        } else {
-            ultimo.setSiguiente(nuevoNodo);
-        }
-
-        tamano++;
-        ultimo = nuevoNodo;
-
+    //Metodo que se encarga
+public void encolar(Pasajero p) {
+    // Se crea un nuevo nodo con el pasajero recibido como parámetro
+    NodoPasajero nuevoNodo = new NodoPasajero(p);
+    
+    // Verifica si la cola está vacía
+    if (esVacia()) {
+        // Si la cola está vacía, el nuevo nodo se convierte en el frente de la cola
+        Frente = nuevoNodo;
+    } else {
+        // Si la cola no está vacía, el nuevo nodo se coloca después del último nodo existente
+        // El nodo "ultimo" apunta al último elemento de la cola y se enlaza con el nuevo nodo
+        ultimo.setSiguiente(nuevoNodo);
     }
 
+    // Incrementa el tamaño de la cola, ya que se ha agregado un nuevo elemento
+    tamano++;
+    
+    // Actualiza el puntero "ultimo" para que apunte al nuevo nodo, ya que este es ahora el último elemento de la cola
+    ultimo = nuevoNodo;
+}
+
+    /*Este metodo verifica si el frente de la cola apunta a null
+    si es así significa que la cola está vacía*/
     public boolean esVacia() {
         return Frente == null;
     }
 
     public Pasajero desencolar() {
-        if (esVacia()) {
+        if (esVacia()) { // Verifica si la cola está vacía
             return null;
         }
-
+         // Guarda el pasajero del frente de la cola para devolverlo después
         Pasajero PasajeroDesencolado = Frente.getElemento();
+        // Mueve el puntero "Frente" al siguiente nodo, eliminando así el primer elemento de la cola
         Frente = Frente.getSiguiente();
+        // Si después de desencolar el elemento la cola queda vacía, actualiza el puntero "ultimo"
         if (Frente == null) {
             ultimo = null;
         }
+        // Disminuye el tamaño de la cola, ya que se eliminó un elemento
         tamano--;
+        // Devuelve el pasajero desencolado
         return PasajeroDesencolado;
     }
 
-    public String imprimirCola() {
-        String respuesta = ""; // En esta respuesta vamos a ir concatenando los nodos, para poder imprimirlos juntos
-        NodoPasajero actual = Frente;
-
-        while (actual != null) {
-            //Podemos hacer el recorrido
-            respuesta += actual.getElemento();
-            actual = actual.getSiguiente();
-        }
-        return respuesta;
-    }
-
-    public String imprimirColaNombre() {
-        String respuesta = ""; // En esta respuesta vamos a ir concatenando los nodos, para poder imprimirlos juntos
-        NodoPasajero actual = Frente;
-
-        while (actual != null) {
-            //Podemos hacer el recorrido
-            respuesta += actual.getElemento().getNombreCompleto() + " - ";
-            actual = actual.getSiguiente();
-        }
-
-        return respuesta;
-    }
-
+    //Este metodo se encargara de imprimir la cola de pasajeros
     public String imprimirColaPasajero() {
         String respuesta = "";
         if (!esVacia()) {
@@ -98,7 +90,7 @@ public class ColaPasajero {
 
         } //Final del if 1 
         else {
-            respuesta = "La pila esta vacia. ";
+            respuesta = "La fila de la estacion esta vacia. ";
         } //Final del else 1
         return respuesta;
 

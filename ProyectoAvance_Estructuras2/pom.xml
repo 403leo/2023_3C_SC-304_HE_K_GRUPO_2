@@ -18,4 +18,5 @@
         <version>0.5.4</version> <!-- O la versión más reciente disponible -->
     </dependency>
     </dependencies>
+    <name>ProyectoAvance_Estructuras2RespaldoGrafos</name>
 </project>

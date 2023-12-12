@@ -1,14 +1,14 @@
-
 package com.mycompany.proyectoavance_estructuras2;
-
 
 public class Vagon {
 
-    public PilaPasajero Fila1;
-    public PilaPasajero Fila2;
-    public PilaPasajero Discapacitados;
-    public Estacion estacionActual;
+    // Se definen las tres filas del vagon 
+    public PilaPasajero Fila1; // Fila 1 
+    public PilaPasajero Fila2; // Fila 2 
+    public PilaPasajero Discapacitados; // Fila 3 de discapacitados
+    public Estacion estacionActual; // Estacion actual. 
 
+    // Encapsuladores
     public PilaPasajero getFila1() {
         return Fila1;
     }
@@ -33,26 +33,18 @@ public class Vagon {
         this.Discapacitados = Discapacitados;
     }
 
+    // Constructor vacio que recibe la cantidad maxima de pasajeros por pilas
     public Vagon() {
         this.Fila1 = new PilaPasajero(3);
         this.Fila2 = new PilaPasajero(3);
         this.Discapacitados = new PilaPasajero(2);
     }
 
+    // Constructor que recibe las filas. 
     public Vagon(PilaPasajero Fila1, PilaPasajero Fila2, PilaPasajero Discapacitados) {
         this.Fila1 = Fila1;
         this.Fila2 = Fila2;
         this.Discapacitados = Discapacitados;
-    }
-
-    @Override
-    public String toString() {
-        return "Fila1 : \n"
-                + Fila1.imprimirPilaPasajero() + "\n"
-                + "Fila2 : \n"
-                + Fila2.imprimirPilaPasajero() + "\n"
-                + "Fila preferencial : \n"
-                + Discapacitados.imprimirPilaPasajero() + "\n";
     }
 
 }
