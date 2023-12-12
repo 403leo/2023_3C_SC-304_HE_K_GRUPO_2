@@ -1,0 +1,19 @@
+Pantalla(): Constructor de la clase Pantalla, inicia la interfaz gráfica, establece las estaciones, crea el grafo de conexiones entre estaciones y maneja la logica del movimiento del tren.
+movimientoVagon(): Metodo anidado dentro del constructor que controla el movimiento del tren entre estaciones. Maneja el flujo de pasajeros, actualiza la interfaz gráfica y avanza a la siguiente estación.
+jButton1ActionPerformed(): Método que responde al evento de hacer clic en el botón "Agregar pasajero". Solicita información al usuario sobre el nuevo pasajero y llama al método InsertarEnEstacion() para añadirlo a la estación correspondiente.
+DatosFijosActionPerformed(): Metodo que responde al evento de hacer clic en el botón "DatosFijos". Agrega datos fijos a varias estaciones con pasajeros predefinidos.
+Metodos de inicializacion de estaciones (llenarAlajuela(), llenarlIMON(), etc.): Estos metodos crean y devuelven instancias de la clase Estacion con configuraciones especificas.
+Metodos de inicialización de colas (llenarAlajuela(cola1, cola2), etc.): Estos métodos inicializan estaciones con colas de pasajeros predefinidas.
+Métodos de manipulación de estructuras de datos (InsertarEnEstacion(), vaciarVagon(), llenarVagon(), etc.): Estos métodos gestionan la inserción, vaciado y manipulación de pasajeros en estaciones, vagones y colas.
+Métodos de impresión (ImprimirEstaciones(), ImprimirVagon(), etc.): Estos metodos generan representaciones de texto de las estaciones y vagones para mostrar en la interfaz grafica.
+Métodos de GUI (initComponents(), main(), etc.): Codigo generado automáticamente por el diseñador de GUI para iniciar y mostrar los componentes visuales
+vaciarVagon
+En resumen, este método recorre los pasajeros en el vagón, saca a aquellos cuyo destino es una estación específica (destino), calcula y muestra información del viaje para esos pasajeros y reordena la pila de asientos del vagón con los pasajeros restantes.
+llenarVagon 
+En resumen, este método intenta ubicar a un pasajero en un vagón, considerando si es discapacitado o no, recorriendo los nodos del vagón hasta encontrar un lugar disponible. Si logra añadir al pasajero, retorna false; de lo contrario, retorna true.
+ImprimirEstaciones
+En resumen, este método recorre una lista de estaciones y construye una cadena que representa cada estación, separada por saltos de línea, para devolverla como resultado.
+InsertarEnEstacion
+En resumen, este método recorre la lista de estaciones y encola al nuevo pasajero en la estación cuyo origen coincida con el proporcionado, teniendo en cuenta su tipo de discapacidad. No se utiliza realmente el StringBuilder para construir una cadena que se devuelva como resultado, por lo que este método actualmente solo muestra un mensaje en la consola y devuelve una cadena vacía.
+ImprimirVagon
+En resumen, este método recorre la lista de vagones y construye una cadena que representa la distribución de asientos en el vagón, mostrando el tipo de asiento (preferencial o normal) y la información de los pasajeros en cada asiento mediante la pila de pasajeros asociada a cada asiento.
