@@ -1,14 +1,22 @@
 Distribucion de tareas y librerias a utilizar: 
 
-Clase Administracion y configuracion [ Josue  ]
-	
-Clase Vagon y pantalla [ Alejhandro ]
-	
-	
-	
-clase Estacion  [ Leonardo  ]
+Admisnistracion1, configuracion, ColaPasajero Y Vagon [ Josue ]
 
-Clase Grafos y nodoGrafos [ Sebas ]
+ListaDobleCircularVagon, NodoPasajero, PilaPasajero, NodoPilaPasajero [ Ale ]
+
+
+NodoEstacion, Estacion, Grafos, NodoGrafo [ Sebas ]
+
+ListaDobleCircular, nodoEstacion y Pasajero  [ Leo ] 
+
+Public Pantalla y la visualizacion [ Ale ]
+
+metodo jButton1ActionPerformed y VaciarVagon [ Leo ]
+
+llenarVagon e imprimirEstaciones [ Sebas ]
+
+InsertarEnEstacion e imprimirVagon [ Josue ]
+
 
 	
 Librerias:
