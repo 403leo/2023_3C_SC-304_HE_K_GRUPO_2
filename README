@@ -1,3 +1,7 @@
+Nota Importante: Al correr el codigo en la clase Administracion1, en la linea 56, colocar la direccion desde donde el esta el arhivo ini, por ejemplo:
+C:\\Users\\leona\\Downloads\\Codigo grafos\\ProyectoAvance_Estructuras2 (3)\\ProyectoAvance_Estructuras2\\ProyectoAvance_Estructuras2\\ProyectoAvance_Estructuras2\\src\\main\\java\\Config.ini
+Recordar no copiar la misma y basarse en esta direccion para poder encontrar la correspondiente. 
+
 Pantalla(): Constructor de la clase Pantalla, inicia la interfaz gráfica, establece las estaciones, crea el grafo de conexiones entre estaciones y maneja la logica del movimiento del tren.
 movimientoVagon(): Metodo anidado dentro del constructor que controla el movimiento del tren entre estaciones. Maneja el flujo de pasajeros, actualiza la interfaz gráfica y avanza a la siguiente estación.
 jButton1ActionPerformed(): Método que responde al evento de hacer clic en el botón "Agregar pasajero". Solicita información al usuario sobre el nuevo pasajero y llama al método InsertarEnEstacion() para añadirlo a la estación correspondiente.
